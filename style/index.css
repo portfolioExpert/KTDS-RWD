@@ -1,1 +1,9 @@
-/* index.css */
+@import url("normalize.css");
+@import url("base.css");
+@import url("theme.css");
+@import url("style.css");
+
+.appHeader{
+    background-color: var(--primary-color);
+    color: var(--white);
+}
