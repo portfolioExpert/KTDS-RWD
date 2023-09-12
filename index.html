@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>반응형 웹 - 웹카페</title>
+    <link rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+    crossorigin="anonymous" />
     <link rel="preload" as="style" crossorigin
     href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-dynamic-subset.css" />
     <link rel="stylesheet" href="./style/index.css"/>
@@ -32,7 +36,7 @@
               <fieldset>
                 <div class="searchForm__group">
                   <div class="formInput">
-                    <label for="search" class="a11yHidden formInput__label">검색어</label>
+                    <label for="search" class="sr-only formInput__label">검색어</label>
                     <input type="search" id="search" name="search" required
                       class="formInput__input" placeholder="검색어를 입력하세요." />
                   </div>
@@ -50,14 +54,16 @@
               </button>
             </div>
           </header>
-        <nav class="appNavigation">
-            <ul class="menu">
-                <li class="menu__item"><a href="/" class="menu__link">메뉴1</a></li>
-                <li class="menu__item"><a href="/" class="menu__link">메뉴2</a></li>
-                <li class="menu__item"><a href="/" class="menu__link">메뉴3</a></li>
-                <li class="menu__item"><a href="/" class="menu__link">메뉴4</a></li>
+          <nav class="appNavigation menu">
+            <h2 class="sr-only">메인 메뉴</h2>
+            <ul class="menu__list">
+              <li class="menu__item"><a href="/" class="menu__link">HTML에 대해</a></li>
+              <li class="menu__item"><a href="/" class="menu__link">CSS에 대해</a></li>
+              <li class="menu__item"><a href="/" class="menu__link">웹표준/웹접근성</a></li>
+              <li class="menu__item"><a href="/" class="menu__link">묻고 답하기</a></li>
+              <li class="menu__item"><a href="/" class="menu__link">자료실</a></li>
             </ul>
-        </nav>
+          </nav>
         <main class="appMain">
             <section class="book">섹션1</section>
             <section class="news">섹션2</section>
