@@ -11,8 +11,45 @@
 <body>
     <div class="container">
         <header class="appHeader">
-            <h1 class="logo">헤더</h1>
-        </header>
+            <h1 class="logo">
+              <a href="/" class="logo__link" aria-label="web cafe"></a>
+            </h1>
+        
+            <ul class="memberOnly">
+              <li>
+                <a href="/">로그인</a>
+              </li>
+              <li>
+                <span class="divider" aria-hidden="true">ㅣ</span><a href="/">회원가입</a>
+              </li>
+              <li>
+                <span class="divider" aria-hidden="true">ㅣ</span><a href="/">커뮤니티</a>
+              </li>
+            </ul>
+        
+            <form action="https://formspree.io/f/xeqwwbwk" method="POST"
+              class="searchForm">
+              <fieldset>
+                <div class="searchForm__group">
+                  <div class="formInput">
+                    <label for="search" class="a11yHidden formInput__label">검색어</label>
+                    <input type="search" id="search" name="search" required
+                      class="formInput__input" placeholder="검색어를 입력하세요." />
+                  </div>
+                  <button type="submit" class="button button--fillSecondary">검색</button>
+                </div>
+              </fieldset>
+            </form>
+        
+            <div class="buttonWrapper">
+              <button type="button" class="button--burger button--none"
+                aria-label="메뉴 열기">
+                <span class="button--burgerBarTop"></span>
+                <span class="button--burgerBarMiddle"></span>
+                <span class="button--burgerBarBottom"></span>
+              </button>
+            </div>
+          </header>
         <nav class="appNavigation">
             <ul class="menu">
                 <li class="menu__item"><a href="/" class="menu__link">메뉴1</a></li>
@@ -22,17 +59,11 @@
             </ul>
         </nav>
         <main class="appMain">
-            <section class="news">새소식</section>
-            <div class="bookWrapper">
-                <section class="book">추천 서적</section>
-                <div class="boardWrapper">
-                    <section class="board">게시판</section>
-                    <div class="favoriteWrapper">
-                        <section class="favorite">인기 사이트</section>
-                        <section class="twitter">트위터</section>
-                    </div>
-                </div>
-            </div>
+            <section class="book">섹션1</section>
+            <section class="news">섹션2</section>
+            <section class="board">섹션3</section>
+            <section class="favorite">섹션4</section>
+            <section class="twitter">섹션5</section>
         </main>
         <footer class="appFooter">푸터</footer>
     </div>

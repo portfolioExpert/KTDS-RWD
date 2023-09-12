@@ -1,9 +1,49 @@
 @import url("normalize.css");
 @import url("base.css");
 @import url("theme.css");
-@import url("style.css");
+/* @import url("style.css"); */
 
 .appHeader{
     background-color: var(--primary-color);
     color: var(--white);
+    display: flex;
+    flex-flow: row wrap;
+    padding: var(--spacing-base) var(--spacing-lg);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.sr-only{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+.logo__link{
+    display:block;
+    width:12.75rem;
+    height: 3.75rem;
+    background-image: url(../images/webcafe-logo@2x.png);
+    background-size: cover;
+}
+
+.memberOnly{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    order: -1;
+}
+
+.searchForm{
+    width: 100%;
 }
