@@ -17,6 +17,7 @@
   --secondary-color: var(--light-brown);
   --accent-color: var(--light-yellow);
   --accent-opacity-color: var(--yellow-opacity);
+  --border-color: var(--silver);
 
   --accent-book: var(--green);
   --accent-news: var(--yellow);
