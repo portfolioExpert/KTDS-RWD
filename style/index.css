@@ -120,7 +120,6 @@ fieldset {
 
 /* 공통 메인 메뉴 */
 .menu__list {
-  background: #ff0;
   padding: var(--spacing-lg);
 }
 
@@ -138,97 +137,246 @@ fieldset {
 /* 공통 메인 콘텐츠 */
 /* 공통 메인 콘텐츠 제목 */
 .sprite {
-    background: url(./../images/sprite_main.png) no-repeat;
-    padding-left: 4.0625rem;
-    height: 3.75rem;
-  }
-  
-  .spriteBook {
-    background-position: 0 0;
-  }
-  
-  .spriteNews {
-    background-position: 0 -230px;
-  }
-  
-  .spriteBoard {
-    background-position: 0 -115px;
-  }
-  
-  .spriteFavorite {
-    background-position: 0 -345px;
-  }
-  
-  .spriteTwitter {
-    background-position: 0 -460px;
-  }
-  
-  .accentBook {
-    color: var(--accent-book);
-  }
-  .accentNews {
-    color: var(--accent-news);
-  }
-  .accentBoard {
-    color: var(--accent-board);
-  }
-  .accentFavorite {
-    color: var(--accent-favorite);
-  }
-  .accentTwitter {
-    color: var(--accent-twitter);
-  }
-  .appMain [class*='__title'] {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    margin-bottom: var(--spacing-base);
-  }
-  
-  .appMain [class*='__koTitle'] {
-    font-size: var(--text-md);
-  }
-  
-  .appMain [class*='__enTitle'] {
-    font-weight: 400;
-    font-size: var(--text-base);
-  }
-  
-  .appMain [class*='__summary'] {
-    line-height: 1.5;
-    margin-top: var(--spacing-base);
-  }
-
-.news__videoContainer .iframeWrapper{
-    aspect-ratio: 16/9;
+  background: url(./../images/sprite_main.png) no-repeat;
+  padding-left: 4.0625rem;
+  height: 3.75rem;
 }
 
-.news__videoContainer iframe{
-    width: 100%;
-    height: 100%;
+.spriteBook {
+  background-position: 0 0;
+}
+
+.spriteNews {
+  background-position: 0 -230px;
+}
+
+.spriteBoard {
+  background-position: 0 -115px;
+}
+
+.spriteFavorite {
+  background-position: 0 -345px;
+}
+
+.spriteTwitter {
+  background-position: 0 -460px;
+}
+
+.accentBook {
+  color: var(--accent-book);
+}
+.accentNews {
+  color: var(--accent-news);
+}
+.accentBoard {
+  color: var(--accent-board);
+}
+.accentFavorite {
+  color: var(--accent-favorite);
+}
+.accentTwitter {
+  color: var(--accent-twitter);
+}
+.appMain [class*='__title'] {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  margin-bottom: var(--spacing-base);
+  font-weight: 700;
+}
+
+.appMain [class*='__koTitle'] {
+  font-size: var(--text-md);
+}
+
+.appMain [class*='__enTitle'] {
+  font-weight: 400;
+  font-size: var(--text-base);
+}
+
+.appMain [class*='__summary'] {
+  line-height: 1.5;
+  margin-top: var(--spacing-base);
+}
+/* 공통 추천서적 */
+.book__cover {
+  width: 60%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.book__coverCaption {
+  margin-top: var(--spacing-sm);
+}
+
+.book__info {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.ratingStar {
+  font-size: var(--text-lg);
+}
+
+/* 공통 새소식 */
+.iframeWrapper {
+  position: relative;
+  padding-top: 56.25%;
+}
+
+iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.news__date {
+  display: block;
+  text-align: right;
+  margin-top: var(--spacing-sm);
+}
+
+/* 공통 게시판 */
+.board {
+  position: relative;
+}
+
+.board__list {
+  padding-left: 0;
+}
+
+.board__item {
+  display: flex;
+  flex-flow: row nowrap;
+  margin-top: var(--spacing-xs);
+}
+
+.board__link {
+  width: calc(100% - 6rem);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.board__date {
+  flex-grow: 1;
+  text-align: right;
+  /* width: 5.3125rem; */
+  flex-shrink: 0;
+}
+.board__more {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* 공통 게시판 */
+.board {
+  position: relative;
+}
+
+.board__list {
+  padding-left: 0;
+}
+
+.board__item {
+  display: flex;
+  flex-flow: row nowrap;
+  margin-top: var(--spacing-xs);
+}
+
+.board__link {
+  width: calc(100% - 6rem);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.board__date {
+  flex-grow: 1;
+  text-align: right;
+  /* width: 5.3125rem; */
+  flex-shrink: 0;
+}
+.board__more {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* 공통 인기사이트 */
+.favorite__list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.favorite__item {
+  margin-top: var(--spacing-xs);
+}
+
+.favorite__link {
+  display: block;
+  position: relative;
+}
+
+.favorite__link:hover::after,
+.favorite__link:focus::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: 0.5em;
+  margin-left: 1em;
+  background: #000;
+  color: #fff;
+  padding: 0.5em;
+  border-radius: 5px;
+  font-size: var(--text-sm);
 }
 
 /* 공통 트위터 */
-.twitter__container{
-    background-color: yellow;
+.twitter__userInfo {
+  display: inline-flex;
 }
 
-.twitter__userInfo{
-    display: inline-flex;
-    background:aqua;
+.twitter__userProfile {
+  float: right;
+  shape-outside: circle(50%);
+  shape-margin: 1em;
+  width: clamp(60px, 20%, 80px);
+  aspect-ratio: 1/1;
 }
 
-.twitter__userProfile{
-    float: right;
-    shape-outside: circle(50%);
-    width: 20%;
+.twitter__userProfileImage {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 0 100%;
 }
 
-.twitter__userProfileImage{
-    aspect-ratio: 1/1;
-    border-radius: 50%;
-    object-fit: cover;
-    object-position: 30% 40%;
+.twitter__summary {
+  margin: var(--spacing-sm) 0 var(--spacing-xs) 0;
+}
+
+/* 공통 푸터 */
+.appFooter {
+  background: var(--primary-color);
+  color: var(--white);
+  padding: var(--spacing-xl);
+  display: flex;
+  flex-flow: column nowrap;
+  gap: var(--spacing-base);
+}
+
+.address {
+  font-style: normal;
+}
+.copyright {
+  font-size: 100%;
 }
 
 /* 모바일 디바이스 */
@@ -327,6 +475,12 @@ fieldset {
   .is--active.menu__list {
     transform: none;
   }
+
+  /* 모바일 푸터 */
+  .address {
+    display: flex;
+    flex-flow: column nowrap;
+  }
 }
 
 /* 데스크탑 디바이스 */
@@ -334,8 +488,7 @@ fieldset {
   /* 데스크탑 공통 */
   .appHeader,
   .menu__list,
-  .appMain,
-  .appFooter {
+  .appMain {
     max-width: var(--container-width);
     margin-left: auto;
     margin-right: auto;
@@ -420,5 +573,9 @@ fieldset {
     /* grid-row: 3/4;
     grid-column: 6/13; */
     grid-area: board;
+  }
+  /* 데스크탑 푸터 */
+  .appFooter {
+    align-items: center;
   }
 }
